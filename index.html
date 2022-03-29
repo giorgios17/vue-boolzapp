@@ -24,13 +24,12 @@
             <div class="col-4 border border-primary p-0">
                 <div class=" col-12 d-flex justify-content-between align-items-center p-2">
                     <div>
-                        <img id="profile-pic" :src="myProfile.avatar" alt="myprofilepic">
+                        <img class="profile-pic" :src="myProfile.avatar" alt="myprofilepic">
                         <span>{{myProfile.myName}}</span>
                     </div>
                     <div><i class="fa-solid fa-spinner me-3 text-secondary"></i><i
                             class="fa-solid fa-message me-3 text-secondary"></i><i
                             class="fa-solid fa-ellipsis-vertical me-3 text-secondary"></i></div>
-
                 </div>
                 <div class=" col-12 d-flex align-items-center bg-notify p-3">
                     <div>
@@ -48,6 +47,17 @@
                         <input class="w-75 border-0" type="text" name="" id="search"
                             placeholder="Cerca o inizia una nuova chat">
                     </div>
+                </div>
+                <div v-for="(item, index) in contacts"
+                    class="col-12 d-flex justify-content-between align-items-center p-1">
+                    <div class="d-flex">
+                        <img class="profile-pic me-3" :src="'img/avatar' + item.avatar + '.jpg'" alt="userpic">
+                        <div>
+                            <div>{{item.name}}</div>
+                            <p class="text-secondary">Ultimo messaggio inviato</p>
+                        </div>
+                    </div>
+                    <div class="text-secondary mb-5">12:00</div>
                 </div>
             </div>
             <div class="col-8 border border-primary"></div>

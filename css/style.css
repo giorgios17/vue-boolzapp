@@ -30,3 +30,23 @@ body {
 .bg-message{
   background-image: url('../img/mine.jpg');
 }
+
+.msg-sent{
+  display: flex;
+  justify-content: end;
+}
+
+.msg-sent-decoration{
+  background-color: #d5f9ba; 
+  border-radius: 10px;
+  padding: 10px 120px 10px 15px;
+}
+.msg-received{
+  display: flex;
+  justify-content: start;
+}
+.msg-received-decoration{
+  background-color: white; 
+  border-radius: 10px;
+  padding: 10px 120px 10px 15px;
+}

@@ -9,7 +9,7 @@ body {
 }
 
 .bg-row-gs{
-  max-width: 1500px;
+  max-width: 1400px;
   margin: auto;
   background-color: #eaeaea;
 }
@@ -29,5 +29,4 @@ body {
 
 .bg-message{
   background-image: url('../img/mine.jpg');
-  height: 100%;
 }

@@ -26,3 +26,8 @@ body {
 .fa-bell-slash{
   color: #8edafc;
 }
+
+.bg-message{
+  background-image: url('../img/mine.jpg');
+  height: 100%;
+}

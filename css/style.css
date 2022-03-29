@@ -67,3 +67,8 @@ p{
 .contact:hover{
   background-color: #8ed9fc56;
 }
+
+.recent-contacts{
+  overflow-y: auto;
+  height: 800px;
+}

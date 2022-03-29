@@ -57,3 +57,7 @@ body {
 #root{
   margin-top: -100px;
 }
+
+p{
+  font-size: 14px;
+}

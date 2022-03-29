@@ -180,3 +180,5 @@ const app = new Vue({
     methods: {
     }
 })
+
+//console.log(contacts[0].messages[2].message) proprietà da raggiungere per ultimo messaggio

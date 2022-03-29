@@ -169,9 +169,13 @@ const app = new Vue({
                         message: 'OK!!',
                         status: 'received'
                     }
-                ],
+                ]
             }
-        ]
+        ],
+        myProfile: {
+            myName: 'Sofia',
+            avatar: 'img/avatar_io.jpg'
+        }
     },
     methods: {
 

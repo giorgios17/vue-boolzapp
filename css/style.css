@@ -5,4 +5,24 @@
 }
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #d9dbd4;
+}
+
+.bg-row-gs{
+  max-width: 1500px;
+  margin: auto;
+  background-color: #eaeaea;
+  height: 90vh
+}
+
+#profile-pic{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.bg-notify{
+  background-color: #8edafc;
+}
+.fa-bell-slash{
+  color: #8edafc;
 }

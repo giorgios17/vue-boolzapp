@@ -95,8 +95,8 @@
 
                 <!-- MESSAGES AREA -->
                 <div class="col-12 flex-grow-1 bg-message p-5">
-                    <div v-for="message in contacts[activeContact].messages" class="message-received">
-                        <p class="sent">{{message.message}}</p>
+                    <div v-for="message in contacts[activeContact].messages" :class="'message-' + message.status">
+                        <p :class="message.status">{{message.message}}</p>
                     </div>
                 </div>
 

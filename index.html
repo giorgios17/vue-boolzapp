@@ -31,9 +31,10 @@
                         <img class="profile-pic" :src="myProfile.avatar" alt="myprofilepic">
                         <span class="fw-bold">{{myProfile.myName}}</span>
                     </div>
-                    <div><i class="fa-solid fa-spinner me-3 text-secondary"></i><i
-                            class="fa-solid fa-message me-3 text-secondary"></i><i
-                            class="fa-solid fa-ellipsis-vertical me-3 text-secondary"></i></div>
+                    <div><i class="fa-solid fa-spinner me-3 text-secondary"></i>
+                        <i class="fa-solid fa-message me-3 text-secondary"></i>
+                        <i class="fa-solid fa-ellipsis-vertical me-3 text-secondary"></i>
+                    </div>
                 </div>
 
                 <!-- DEKSTOP NOTIFICATIONS -->
@@ -94,27 +95,16 @@
 
                 <!-- MESSAGES AREA -->
                 <div class="col-12 flex-grow-1 bg-message p-5">
-                    <!-- <div class="message">
+                    <div class="message-sent">
                         <p class="sent">Hai portato a spasso il cane?</p>
                     </div>
-                    <div class="message">
+                    <div class="message-sent">
                         <p class="sent">Ricordati di stendere i panni</p>
                     </div>
-                    <div class="message">
+                    <div class="message-received">
                         <p class="received">Tutto fatto!</p>
-                    </div> -->
-                    <!-- <div class="message sent">
-                        {{contacts[0].messages[0].message}}
                     </div>
-                    <div class="message sent">
-                        {{contacts[0].messages[1].message}}
-                    </div>
-                    <div class="message received">
-                        {{contacts[0].messages[2].message}}
-                    </div> -->
-                    <div vfor="(contact, index) in contacts" class="message">
-                        <p class="sent">{{contact}}</p>
-                    </div>
+
                 </div>
 
                 <!-- INPUT AREA -->
@@ -127,7 +117,8 @@
                     </div>
                     <!-- input message to send -->
                     <div class="flex-grow-1 mx-3">
-                        <input class="border-0 w-100" type="text" name="" id="search" placeholder="Scrivi un messaggio">
+                        <input @keyUp.enter="" v-model="newMessage" class="border-0 w-100" type="text" name=""
+                            id="newMessage" placeholder="Scrivi un messaggio">
                     </div>
                     <!-- microphone audio message -->
                     <div>
@@ -136,7 +127,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 

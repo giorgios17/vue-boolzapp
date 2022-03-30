@@ -202,6 +202,21 @@ const app = new Vue({
         profilePic(contact) {
             return `img/avatar${contact.avatar}.jpg`
         },
-
+        newMessageEntered(activeContact) {
+            const inputMessage = {
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[activeContact].messages.push(inputMessage);
+            this.newMessage = '';
+            setTimeout(this.okReply(activeContact), 1000)
+        },
+        okReply(activeContact) {
+            const reply = {
+                message: 'OK!',
+                status: 'received'
+            }
+            this.contacts[activeContact].messages.push(reply);
+        }
     }
 })

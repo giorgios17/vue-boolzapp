@@ -110,8 +110,9 @@
                     </div>
                     <!-- input message to send -->
                     <div class="flex-grow-1 mx-3">
-                        <input @keyUp.enter="" v-model="newMessage" class="border-0 w-100" type="text" name=""
-                            id="newMessage" placeholder="Scrivi un messaggio">
+                        <input @keyUp.enter="newMessageEntered(activeContact)" v-model="newMessage"
+                            class="border-0 w-100" type="text" name="" id="newMessage"
+                            placeholder="Scrivi un messaggio">
                     </div>
                     <!-- microphone audio message -->
                     <div>

@@ -95,7 +95,7 @@
 
                 <!-- MESSAGES AREA -->
                 <div class="col-12 flex-grow-1 bg-message p-5">
-                    <div class="message-sent">
+                    <!-- <div class="message-sent">
                         <p class="sent">Hai portato a spasso il cane?</p>
                     </div>
                     <div class="message-sent">
@@ -103,7 +103,11 @@
                     </div>
                     <div class="message-received">
                         <p class="received">Tutto fatto!</p>
+                    </div> -->
+                    <div vfor="contact in contacts" class="message-received">
+                        <p class="received">{{contact}}</p>
                     </div>
+
 
                 </div>
 

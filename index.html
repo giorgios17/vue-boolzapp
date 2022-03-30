@@ -95,21 +95,9 @@
 
                 <!-- MESSAGES AREA -->
                 <div class="col-12 flex-grow-1 bg-message p-5">
-                    <!-- <div class="message-sent">
-                        <p class="sent">Hai portato a spasso il cane?</p>
+                    <div v-for="message in contacts[activeContact].messages" class="message-received">
+                        <p class="sent">{{message.message}}</p>
                     </div>
-                    <div class="message-sent">
-                        <p class="sent">Ricordati di stendere i panni</p>
-                    </div>
-                    <div class="message-received">
-                        <p class="received">Tutto fatto!</p>
-                    </div> -->
-                    <div v-for="(contact, index) in contacts">
-                        <div v-for="(message, index) in contact.messages" class="message-received">
-                            <p class="sent">{{message.message}}</p>
-                        </div>
-                    </div>
-
                 </div>
 
                 <!-- INPUT AREA -->

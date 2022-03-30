@@ -43,14 +43,14 @@ body {
 .sent{
   background-color: #d5f9ba; 
   border-radius: 10px;
-  padding: 10px 120px 10px 15px;
+  padding: 15px 180px 10px 15px;
 }
 
 .received{
   justify-content: start;
   background-color: white;
   border-radius: 10px;
-  padding: 10px 120px 10px 15px;
+  padding: 15px 180px 10px 15px;
 }
 
 .band{
@@ -75,4 +75,13 @@ p{
 .recent-contacts{
   overflow-y: auto;
   height: 830px;
+}
+
+.f-size-10{
+  font-size: 10px;
+}
+.data-msg{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }

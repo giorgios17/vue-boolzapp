@@ -104,10 +104,11 @@
                     <div class="message-received">
                         <p class="received">Tutto fatto!</p>
                     </div> -->
-                    <div vfor="contact in contacts" class="message-received">
-                        <p class="received">{{contact}}</p>
+                    <div v-for="(contact, index) in contacts">
+                        <div v-for="(message, index) in contact.messages" class="message-received">
+                            <p class="sent">{{message.message}}</p>
+                        </div>
                     </div>
-
 
                 </div>
 

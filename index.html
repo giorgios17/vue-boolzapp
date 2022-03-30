@@ -80,7 +80,7 @@
                 <!-- ACTIVE CONVERSATION -->
                 <div class="col-12 d-flex justify-content-between align-items-center p-2">
                     <div class="d-flex">
-                        <img class="profile-pic" src="img/avatar_1.jpg" alt="">
+                        <img class="profile-pic" :src="profilePic(contacts[activeContact])" alt="">
                         <div>
                             <div v-if="activeContact !== null" class="fw-bold">{{contacts[activeContact].name}}</div>
                             <p class="text-secondary mb-0">Ultimo accesso oggi alle 12:00</p>

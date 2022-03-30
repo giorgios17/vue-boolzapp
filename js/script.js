@@ -176,13 +176,16 @@ const app = new Vue({
             myName: 'Sofia',
             avatar: 'img/avatar_io.jpg'
         },
-        activeContact: null,
+        activeContact: 0,
 
     },
     methods: {
         getActiveContact(indexActive) {
             this.activeContact = indexActive;
             console.log(this.activeContact)
+        },
+        profilePic(contact) {
+            return `img/avatar${contact.avatar}.jpg`
         }
     }
 })

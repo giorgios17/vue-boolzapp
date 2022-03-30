@@ -192,7 +192,9 @@ const app = new Vue({
             avatar: 'img/avatar_io.jpg'
         },
         activeContact: 0,
-        newMessage: ''
+        newMessage: '',
+        searchContact: ''
+
     },
     methods: {
         getActiveContact(indexActive) {
@@ -217,6 +219,20 @@ const app = new Vue({
                 status: 'received'
             }
             this.contacts[activeContact].messages.push(reply);
+        },
+        showSearched(string) {
+            this.contacts.forEach((contact, index) => {
+                console.log(contact.name);
+                console.table(this.contacts);
+                if (contact.name.includes(string)) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false
+                }
+
+
+
+            });
         }
     }
 })

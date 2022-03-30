@@ -224,7 +224,7 @@ const app = new Vue({
             this.contacts.forEach((contact, index) => {
                 console.log(contact.name);
                 console.table(this.contacts);
-                if (contact.name.includes(string)) {
+                if (contact.name.toLowerCase().includes(string)) {
                     contact.visible = true;
                 } else {
                     contact.visible = false

@@ -4,6 +4,11 @@ assegnando due classi CSS diverse
 Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
 QUINDI solo la parte a sinistra sarà dinamica (per mostrare la lista contatti), 
 mentre a destra ci sarà HTML statico, uguale a quello presentato nel layout
+
+Milestone 2
+● Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
+messaggi relativi al contatto attivo all’interno del pannello della conversazione
+● Click sul contatto mostra la conversazione del contatto cliccato
 */
 
 const app = new Vue({
@@ -187,7 +192,6 @@ const app = new Vue({
         profilePic(contact) {
             return `img/avatar${contact.avatar}.jpg`
         }
+
     }
 })
-
-//console.log(contacts[0].messages[2].message) proprietà da raggiungere per ultimo messaggio

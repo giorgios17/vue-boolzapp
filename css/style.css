@@ -31,25 +31,22 @@ body {
   background-image: url('../img/mine.jpg');
 }
 
-.msg-sent{
+.message{
   display: flex;
-  justify-content: end;
+  border-radius: 10px;
+  padding: 10px 120px 10px 15px;
 }
 
-.msg-sent-decoration{
+.sent{
+  justify-content: end;
   background-color: #d5f9ba; 
-  border-radius: 10px;
-  padding: 10px 120px 10px 15px;
 }
-.msg-received{
-  display: flex;
+
+.received{
   justify-content: start;
+  background-color: white;
 }
-.msg-received-decoration{
-  background-color: white; 
-  border-radius: 10px;
-  padding: 10px 120px 10px 15px;
-}
+
 .band{
   height: 130px;
   background-color: #009688;
@@ -61,8 +58,9 @@ body {
 p{
   font-size: 14px;
 }
-.contact{
+.contact-layout{
   cursor: pointer;
+  border-bottom: 1.5px solid lightgray;
 }
 .contact:hover{
   background-color: #8ed9fc56;

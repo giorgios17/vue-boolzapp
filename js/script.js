@@ -175,9 +175,15 @@ const app = new Vue({
         myProfile: {
             myName: 'Sofia',
             avatar: 'img/avatar_io.jpg'
-        }
+        },
+        activeContact: null,
+
     },
     methods: {
+        getActiveContact(indexActive) {
+            this.activeContact = indexActive;
+            console.log(this.activeContact)
+        }
     }
 })
 

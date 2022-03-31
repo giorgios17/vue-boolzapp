@@ -232,7 +232,7 @@ const app = new Vue({
         },
         showSearched(string) {
             this.contacts.forEach((contact) => {
-                if (contact.name.toLowerCase().includes(string)) {
+                if (contact.name.toLowerCase().includes(string.toLowerCase())) {
                     contact.visible = true;
                 } else {
                     contact.visible = false

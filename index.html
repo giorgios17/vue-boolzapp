@@ -69,8 +69,9 @@
                             <img class="profile-pic me-3" :src="profilePic(contact)" alt="userpic">
                             <div>
                                 <div class="fw-bold">{{contact.name}}</div>
-                                <p class="text-secondary">
-                                    <i class="fas fa-check"></i> {{contact.messages[contact.messages.length-1].message}}
+                                <p v-if="contact.messages.length > 0" class="text-secondary">
+                                    <i class="fas fa-check"></i>
+                                    {{contact.messages[contact.messages.length-1].message}}
                                 </p>
                             </div>
                         </div>

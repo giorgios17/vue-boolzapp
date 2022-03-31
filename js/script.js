@@ -245,7 +245,9 @@ const app = new Vue({
             return hoursMinutes;
         },
         deleteMessage(array, index) {
+            console.log(index);
             array.splice(index, 1);
+            console.log(array)
         }
     }
 })

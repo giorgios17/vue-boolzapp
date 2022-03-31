@@ -218,7 +218,7 @@ const app = new Vue({
             if (inputMessage.message !== '') {
                 this.contacts[activeContact].messages.push(inputMessage);
                 this.newMessage = '';
-                setTimeout(this.okReply(activeContact), 1000)
+                setTimeout(this.okReply, 1000, activeContact)
             }
 
         },
@@ -246,9 +246,6 @@ const app = new Vue({
         },
         deleteMessage(array, index) {
             array.splice(index, 1);
-        },
-        test(index) {
-            console.log(index);
         }
     }
 })

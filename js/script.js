@@ -203,12 +203,16 @@ const app = new Vue({
 
     },
     methods: {
+        // funzione per ottenere contatto attivo tramite index
         getActiveContact(indexActive) {
             this.activeContact = indexActive;
         },
+        // funzione per avere un avatar dinamico in base al valore di avatar in contacts
         profilePic(contact) {
             return `img/avatar${contact.avatar}.jpg`
         },
+        //funzione che genera un nuovo messaggio inserito nell'input e lo pusha dentro l'array messages
+        //ed ottiene una risposta
         newMessageEntered(activeContact) {
             const inputMessage = {
                 date: this.getHoursMinutes(),
@@ -222,6 +226,7 @@ const app = new Vue({
             }
 
         },
+        //risposta automatica ai messaggi inviati 
         okReply(activeContact) {
             const reply = {
                 date: this.getHoursMinutes(),
@@ -230,6 +235,7 @@ const app = new Vue({
             }
             this.contacts[activeContact].messages.push(reply);
         },
+        //funzione per visualizzare solo i contatti che includono la stringa digitata
         showSearched(string) {
             this.contacts.forEach((contact) => {
                 if (contact.name.toLowerCase().includes(string.toLowerCase())) {
@@ -239,11 +245,13 @@ const app = new Vue({
                 }
             });
         },
+        // funzione per ottenere ore e minuti attuali
         getHoursMinutes() {
             const d = new Date();
             const hoursMinutes = d.getHours() + ':' + d.getMinutes();
             return hoursMinutes;
         },
+        //funzione per eliminare i messaggi
         deleteMessage(array, index) {
             array.splice(index, 1);
         }

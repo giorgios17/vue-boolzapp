@@ -99,8 +99,9 @@
 
                 <!-- MESSAGES AREA -->
                 <div class="col-12 flex-grow-1 bg-message p-5">
-                    <div v-for="message in contacts[activeContact].messages" :class="'message-' + message.status">
-                        <div :class="message.status " class="position-relative">{{message.message}}
+                    <div v-for="(message, index) in contacts[activeContact].messages"
+                        :class="'message-' + message.status">
+                        <div @click="test(index)" :class="message.status " class="position-relative">{{message.message}}
                             <!-- dropdown info/delete messag -->
                             <div class="dropdown dropdown-gs">
                                 <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -109,7 +110,9 @@
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#">Info message</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete message</a></li>
+                                    <li><a @click="deleteMessage(contacts[activeContact].messages, index)"
+                                            class="dropdown-item" href="#">Delete
+                                            message</a></li>
                                 </ul>
                             </div>
                             <span class="data-msg text-secondary f-size-10">{{message.date}}</span>

@@ -243,6 +243,12 @@ const app = new Vue({
             const d = new Date();
             const hoursMinutes = d.getHours() + ':' + d.getMinutes();
             return hoursMinutes;
+        },
+        deleteMessage(array, index) {
+            array.splice(index, 1);
+        },
+        test(index) {
+            console.log(index);
         }
     }
 })

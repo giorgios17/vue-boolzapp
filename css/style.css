@@ -34,19 +34,23 @@ body {
 .message-sent{
   display: flex;
   justify-content: end;
+  margin-bottom: 10px;
 }
 .message-received{
   display: flex;
   justify-content: start;
+  margin-bottom: 10px;
 }
 
 .sent{
+  display: flex;
   background-color: #d5f9ba; 
   border-radius: 10px;
   padding: 15px 180px 10px 15px;
 }
 
 .received{
+  display: flex;
   justify-content: start;
   background-color: white;
   border-radius: 10px;
@@ -74,7 +78,6 @@ p{
 
 .recent-contacts{
   overflow-y: auto;
-  height: 830px;
 }
 
 .f-size-10{
@@ -84,4 +87,16 @@ p{
   position: absolute;
   bottom: 5px;
   right: 5px;
+}
+.windowMessage{
+  position: absolute;
+  top: 30px;
+  left: 160px;
+  padding: 50px 5px;
+  background-color: white;
+}
+.dropdown-gs{
+  position: absolute;
+  top: 0;
+  right: 0;
 }

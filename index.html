@@ -14,7 +14,9 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c2f6360f22.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Boolzap</title>
 </head>
@@ -98,10 +100,20 @@
                 <!-- MESSAGES AREA -->
                 <div class="col-12 flex-grow-1 bg-message p-5">
                     <div v-for="message in contacts[activeContact].messages" :class="'message-' + message.status">
-                        <p :class="message.status " class="position-relative">{{message.message}}
+                        <div :class="message.status " class="position-relative">{{message.message}}
+                            <!-- dropdown info/delete messag -->
+                            <div class="dropdown dropdown-gs">
+                                <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fas fa-chevron-down text-secondary"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">Info message</a></li>
+                                    <li><a class="dropdown-item" href="#">Delete message</a></li>
+                                </ul>
+                            </div>
                             <span class="data-msg text-secondary f-size-10">{{message.date}}</span>
-                        </p>
-
+                        </div>
                     </div>
                 </div>
 
@@ -127,6 +139,7 @@
             </div>
         </div>
     </div>
+
 
 
 
